@@ -1,6 +1,6 @@
 # Variance-Guided Feature Projection
 
-Variance-guided feature projection is a method developed to reduce complexity while preserving expressiveness. This is done by projecting input into a variance varying feature space through a module, namely the Variance-initialized Linear Projection (VLP) module. The publication of the method can be found at [link]().
+Variance-guided feature projection is a method developed to reduce complexity while preserving expressiveness. This is done by projecting input into a variance varying feature space through a module, namely the Variance-initialized Linear Projection (VLP) module. The publication of the method can be found at [doi]().
 
 ## Required Packages
 
@@ -13,7 +13,7 @@ pip install tensorflow[and-cuda]==2.17.0
 
 ## Usage
 
-The repository contains the Python file VLP.py for the class module, main.py for the model loading and prediction, modify_MBV3.py for the modified VLP-MobileNetV3. For ShuffleNetV2, we have provided the modified version that matches the syntaxes of the required packages. Alternatively, you can find the original repository in [ShuffleNetV2](https://github.com/opconty/keras-shufflenetv2). The repository contains trained model checkpoints under [link]() that can be loaded via the following sample usage code. The performance of each models can be found in the publication, at [link]().
+The [scripts](/scripts/) repository contains the Python file VLP.py for the class module, main.py for the model loading and prediction, modify_MBV3.py for the modified VLP-MobileNetV3. For ShuffleNetV2, we have provided the modified version that matches the syntaxes of the required packages. Alternatively, you can find the original repository in [ShuffleNetV2](https://github.com/opconty/keras-shufflenetv2). The repository contains trained model checkpoints under [models](/models/) that can be loaded via the following sample usage code. The performance of each models can be found in the publication, at [doi]().
 
 ```python
 # Import the VLP layer from VLP.py
@@ -50,4 +50,5 @@ if __name__ == '__main__':
 ```
 
 ## Dataset
-The repository contains datasets used to test the models and can be found inside [link](). Particularly, the repository contains only the modified datasets for reproducibility purposes. The original datasets can be found at [CIFAR-100](https://cave.cs.toronto.edu/kriz/cifar.html), [CODEBRIM](https://zenodo.org/records/2620293), [PlantVillage](https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset) and [PneumoniaMNIST](https://www.tensorflow.org/datasets/catalog/pneumonia_mnist).
+The repository contains datasets used to test the models and can be found inside [images](/images/) folder. Particularly, the repository contains only the modified datasets [CODEBRIM](/images/CODEBRIM/) and [PlantVillage](/images/PlantVillage/) for reproducibility purposes. The original datasets can be found at [CIFAR-100](https://cave.cs.toronto.edu/kriz/cifar.html), [CODEBRIM](https://zenodo.org/records/2620293), [PlantVillage](https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset) and [PneumoniaMNIST](https://www.tensorflow.org/datasets/catalog/pneumonia_mnist).
+Caution: For [defects in CODEBRIM training directory](/images/CODEBRIM/train/Defects), it consists of part1-3, which requires further merging after downloading into local directory.
